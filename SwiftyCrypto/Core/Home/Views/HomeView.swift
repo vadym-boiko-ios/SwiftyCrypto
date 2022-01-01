@@ -13,7 +13,7 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-            //background layer
+            // background layer
             Color.theme.background
                 .ignoresSafeArea()
             
