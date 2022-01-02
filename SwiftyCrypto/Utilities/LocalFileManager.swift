@@ -27,6 +27,7 @@ class LocalFileManager {
         //save image for path
         do {
             try data.write(to: url)
+            print("save")
         } catch let error {
             print ("Error saving image. \(error)")
         }
