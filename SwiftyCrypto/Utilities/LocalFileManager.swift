@@ -40,6 +40,7 @@ class LocalFileManager {
             FileManager.default.fileExists(atPath: url.path) else {
                 return nil
             }
+    
         return UIImage(contentsOfFile: url.path)
               
     }
@@ -61,7 +62,7 @@ class LocalFileManager {
         guard let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
             return nil
         }
-        
+    
         return url.appendingPathComponent(folderName)
     }
     
@@ -69,7 +70,7 @@ class LocalFileManager {
         guard let folderURL = getURLForFolder(folderName: folderName) else {
             return nil
         }
-        
+
         return folderURL.appendingPathComponent(imageName + ".png")
     }
     
