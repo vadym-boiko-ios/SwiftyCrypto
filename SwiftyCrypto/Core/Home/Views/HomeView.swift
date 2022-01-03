@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject private var vm: HomeViewModel
-    @State private var shorPortfolio: Bool = false
+    @State private var showPortfolio: Bool = false
     
     var body: some View {
         ZStack {
@@ -20,16 +20,15 @@ struct HomeView: View {
             // content layer
             VStack {
                 homeHeader
-                
+                HomeStatsView(showPortfolio: $showPortfolio)
                 SearchBarView(searchText: $vm.searchText)
-                
                 columnTitles
                 
-                if !shorPortfolio {
+                if !showPortfolio {
                     allCoinsList
                         .transition(.move(edge: .leading))
                 }
-                if shorPortfolio {
+                if showPortfolio {
                     portfolioCoinsList
                         .transition(.move(edge: .trailing))
                 }
@@ -52,23 +51,23 @@ struct HomeView_Previews: PreviewProvider {
 extension HomeView {
     private var homeHeader: some View {
         HStack {
-            CircleButtonView(iconName: shorPortfolio ? "plus" : "info")
-                .animation(.none, value: shorPortfolio)
+            CircleButtonView(iconName: showPortfolio ? "plus" : "info")
+                .animation(.none, value: showPortfolio)
                 .background(
-                    CircleButtonAnimationView(animate: $shorPortfolio)
+                    CircleButtonAnimationView(animate: $showPortfolio)
                 )
             Spacer()
-            Text(shorPortfolio ? "Portfolio" : "Live Prices")
+            Text(showPortfolio ? "Portfolio" : "Live Prices")
                 .font(.headline)
                 .fontWeight(.heavy)
                 .foregroundColor(Color.theme.accent)
-                .animation(.none, value: shorPortfolio)
+                .animation(.none, value: showPortfolio)
             Spacer()
             CircleButtonView(iconName: "chevron.right")
-                .rotationEffect(.degrees(shorPortfolio ? 180 : 0))
+                .rotationEffect(.degrees(showPortfolio ? 180 : 0))
                 .onTapGesture {
                     withAnimation(.spring()) {
-                        shorPortfolio.toggle()
+                        showPortfolio.toggle()
                     }
                 }
         }
@@ -79,7 +78,7 @@ extension HomeView {
         HStack {
             Text("Coin")
             Spacer()
-            if shorPortfolio {
+            if showPortfolio {
                 Text("Holdings")
             }
             Text("Price")
