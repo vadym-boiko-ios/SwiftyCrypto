@@ -22,6 +22,8 @@
 		DF96D7C9277CC6F50069A70B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF96D7C8277CC6F50069A70B /* HomeViewModel.swift */; };
 		DF96D7CC277CEF880069A70B /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF96D7CB277CEF880069A70B /* CoinDataService.swift */; };
 		DF96D7CF277D00ED0069A70B /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF96D7CE277D00ED0069A70B /* NetworkingManager.swift */; };
+		DFB40A4E2784AA3000932DE8 /* MarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB40A4D2784AA3000932DE8 /* MarketData.swift */; };
+		DFB40A502784B76000932DE8 /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB40A4F2784B76000932DE8 /* MarketDataService.swift */; };
 		DFE89755277BBF7600AA44E0 /* SwiftyCryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE89754277BBF7600AA44E0 /* SwiftyCryptoApp.swift */; };
 		DFE8975C277BBF7800AA44E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE8975B277BBF7800AA44E0 /* Preview Assets.xcassets */; };
 		DFE89767277BC22700AA44E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE89766277BC22700AA44E0 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		DF96D7C8277CC6F50069A70B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DF96D7CB277CEF880069A70B /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		DF96D7CE277D00ED0069A70B /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		DFB40A4D2784AA3000932DE8 /* MarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketData.swift; sourceTree = "<group>"; };
+		DFB40A4F2784B76000932DE8 /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
 		DFE89751277BBF7600AA44E0 /* Swifty Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swifty Crypto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE89754277BBF7600AA44E0 /* SwiftyCryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyCryptoApp.swift; sourceTree = "<group>"; };
 		DFE8975B277BBF7800AA44E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 			children = (
 				DF96D7CB277CEF880069A70B /* CoinDataService.swift */,
 				DF6DA077277DE016006AD0D2 /* CoinImageService.swift */,
+				DFB40A4F2784B76000932DE8 /* MarketDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 			children = (
 				DFE89778277BD43500AA44E0 /* Coin.swift */,
 				DF83781F27831FE500A8ECA0 /* Statistic.swift */,
+				DFB40A4D2784AA3000932DE8 /* MarketData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF83782027831FE500A8ECA0 /* Statistic.swift in Sources */,
+				DFB40A502784B76000932DE8 /* MarketDataService.swift in Sources */,
 				DF8378222783415400A8ECA0 /* StatisticsView.swift in Sources */,
 				DF6F8DB12781CAEF009FD174 /* UIApplication.swift in Sources */,
 				DF96D7CC277CEF880069A70B /* CoinDataService.swift in Sources */,
@@ -297,6 +304,7 @@
 				DFE8976A277BC33800AA44E0 /* Color.swift in Sources */,
 				DF96D7CF277D00ED0069A70B /* NetworkingManager.swift in Sources */,
 				DFE89776277BCEF800AA44E0 /* CircleButtonAnimationView.swift in Sources */,
+				DFB40A4E2784AA3000932DE8 /* MarketData.swift in Sources */,
 				DF6DA07A277DE216006AD0D2 /* CoinImageViewModel.swift in Sources */,
 				DF96D7C5277CA7EF0069A70B /* PreviewProvider.swift in Sources */,
 				DF96D7C7277CB1860069A70B /* Double.swift in Sources */,
